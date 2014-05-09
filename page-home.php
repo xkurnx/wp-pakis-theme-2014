@@ -2,11 +2,9 @@
 <?php get_header(); ?>
 
 <div class = 'featuredArticles'>
-<?php
-if( function_exists('FA_display_slider') ){
-    FA_display_slider(372);
-}
-?>
+ <?php
+ dynamic_sidebar( 'Slider' );
+ ?> 
 </div>
 
 <div class = 'recentNews'>
@@ -51,7 +49,7 @@ if( function_exists('FA_display_slider') ){
 </div>
 
 <div class="topBanner">
-	 <?php
+ <?php
  dynamic_sidebar( 'Banner #1' );
  ?> 
 </div>
@@ -105,20 +103,23 @@ if( function_exists('FA_display_slider') ){
 			<?php dynamic_sidebar( 'Footer Widget 1' ) ;?>
 			</div>
 			
-			<h3 class="sectionTitle">Informasi Keperkaraan</h3>
+			<h3 class="sectionTitle"><span>Informasi Keperkaraan</span></h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 2' ) ;?>
 			</div>
 			
-			<h3 class="sectionTitle">Pengawasan &amp; transaparansi</h3>
+			<h3 class="sectionTitle"><span>Pengawasan &amp; transaparansi</span></h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 3' ) ;?>
 			</div>
 			
-			<h3 class="sectionTitle">Pengaduan &amp; Informasi</h3>
+			<h3 class="sectionTitle"><span>Pengaduan &amp; Informasi</span></h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 3' ) ;?>
-			</div>		
+			</div>	
+
+			<iframe id="blockrandom" name="" src="http://internal.pa-kisaran.net/grafikperkarahome.php" width="650" height="300" scrolling="no" align="top" frameborder="0" class="wrapper">
+			Tidak Ada Iframe</iframe>	
 			
 		</article>
 		<?php get_sidebar(); ?>

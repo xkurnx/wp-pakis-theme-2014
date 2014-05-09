@@ -153,6 +153,15 @@ function mts_widgets_init() {
 	));
 	
 	register_sidebar(array(
+		'name'=>'Slider',
+		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
+		'before_widget' => '<li id="%1$s" class="widget widget-sidebar %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	register_sidebar(array(
 		'name'=>'Featured Section',
 		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
 		'before_widget' => '<li id="%1$s" class="widget widget-sidebar %2$s">',
@@ -188,6 +197,15 @@ function mts_widgets_init() {
 	));
 	register_sidebar(array(
 		'name'=>'Footer Widget 3',
+		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
+		'before_widget' => '<li id="%1$s" class="widget widget-sidebar %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	register_sidebar(array(
+		'name'=>'Footer Widget 4',
 		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
 		'before_widget' => '<li id="%1$s" class="widget widget-sidebar %2$s">',
 		'after_widget' => '</li>',

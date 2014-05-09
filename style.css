@@ -170,8 +170,7 @@ h2 {
     line-height: 1.4;
 }
 h3 {
-    font-size: 22px;
-    line-height: 1.4;
+    font-size: 20px;
 }
 h4 {
     font-size: 20px;
@@ -368,8 +367,8 @@ a.header-button {
     text-align: left;
     text-decoration: none;
     line-height: 1.4;
-    padding: 5px 30px 0px 20px;
-    min-height: 46px;
+    padding: 5px 10px 0px 10px;
+	min-height: 30px;
     font-weight: bold;
     border-right: 1px solid #E2E2E2;
     border-left: 1px solid #fff;
@@ -391,7 +390,7 @@ a.header-button {
     top: 22px;
 }
 .secondary-navigation ul > ul a .sf-sub-indicator {
-    top: 18px;
+    top: 0px;
     right: -10px;
 }
 .sf-js-enabled li ul.sf-with-ul { padding-right: 20px }
@@ -578,9 +577,9 @@ nav a#pull { display: none }
 }
 .post.excerpt {
     overflow: hidden;
-    margin-bottom: 24px;
+    margin-bottom: 5px;
     border-bottom: 1px solid #e2e2e2;
-    padding-bottom: 28px;
+    padding-bottom: 9px;
 }
 .wp-post-image { float: left }
 .featured-thumbnail {
@@ -621,7 +620,7 @@ nav a#pull { display: none }
     font-size: 32px;
     line-height: 1.1;
 }
-.title a { color: #2A2A2A }
+.title a { color: #61a001 }
 .page h1.title {
     margin-bottom: 5px;
     padding-top: 0;
@@ -975,6 +974,43 @@ hr {
     border-left: 1px solid #D8D8D8!important;
     margin-top: 11px;
 }
+
+footer{
+	background:linear-gradient(to bottom,#67a200 0,#3a7400 100%);
+}
+
+footer .widget h3{
+	font-size:14px;
+	color:#fff;
+}
+
+footer .widget{
+	padding:5px;
+	color:#fff;
+}
+
+footer .widget a{
+	color:#d4f39e!important;
+}
+
+footer ul.menu{
+	list-style-type:disc;
+	padding-left:3px;
+	margin-left:15px;
+}
+	
+footer .widget_nav_menu li{
+	padding:0px;
+}
+
+footer .widget_nav_menu ul li a{
+	font-size:12px;
+}
+
+footer .widget li{
+	margin:2px 0px;
+	padding:px;
+}
 footer .sbutton {
     width: 19.4%;
     height: 38px;
@@ -1116,7 +1152,7 @@ body > footer .sidebar .widget .title {
     color: #D4D8DB;
 }
 footer .widget { margin-bottom: 0px }
-footer .widget li a { color: #EE210B }
+footer .widget li a { color: #fff }
 footer .widget li a:hover { color: #222 }
 footer {
     position: relative;
@@ -1846,11 +1882,12 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 .recentNews {
 	float:left;
 	padding:10px;
-	width:230px;
+	width:226px;
 	font-size:12px;
 	line-height:12px;
 	border:1px solid #ccc;
 	border-top:0px;
+	background:#f0f8ec;
 }
 
 .recentNews h3{
@@ -1869,10 +1906,14 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 .widgetsRows{
 	clear:both;
 	display:block;
+	min-width:200px;
 }
 
 .widgetsRows h3{
 	font-size:14px;
+	border-bottom:1px solid #2c9c1a;
+	padding-bottom:3px;
+	margin-right:10px;
 }
 
 .widgetsRows li li{
@@ -1880,13 +1921,21 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	padding:0px;
 }
 
-h3.sectionTitle{
+.sectionTitle{
 	clear:both;
+	background:url('images/stripe-bg.png');
+	padding:0px;
+	line-height:1em;
+}
+
+.sectionTitle span{
+	background:#fff;
+	padding:0px 3px 0px 0px;
 }
 
 .widgetsRows .widget{
 	float:left;
-	width:200px;
+	width:205px;
 }
 
 .footerSection{
