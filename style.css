@@ -221,7 +221,6 @@ a:link, a:visited, a:active { text-decoration: none }
     clear: both;
     width: 96%;
     padding: 0;
-    padding-top: 24px;
     max-width: 940px;
     overflow: hidden;
 }
@@ -229,8 +228,9 @@ a:link, a:visited, a:active { text-decoration: none }
     width: 100%;
     display: block;
     float: left;
+	margin-top:15px;
 }
-#page.single { margin-top: 25px }
+
 /*-[ Trending ]-----------------------*/
 .trending-articles {
     background: #2a2a2a;
@@ -977,6 +977,7 @@ hr {
 
 footer{
 	background:linear-gradient(to bottom,#67a200 0,#3a7400 100%);
+	padding:15px;
 }
 
 footer .widget h3{
@@ -990,8 +991,10 @@ footer .widget{
 }
 
 footer .widget a{
-	color:#d4f39e!important;
+	color:#d4f39e;
 }
+
+footer .widget a:hover{color:#fff;}
 
 footer ul.menu{
 	list-style-type:disc;
@@ -1015,6 +1018,27 @@ footer .sbutton {
     width: 19.4%;
     height: 38px;
 }
+
+footer .footerMenu{
+	border-top:1px dotted #ccc;
+	margin-top:10px;
+	padding-top:10px;
+}
+
+footer .footerMenu ul{
+	list-style:none;
+}
+
+footer .footerMenu li{
+	float:left;
+	font-size:12px;
+	margin-right:20px;
+}
+
+footer .footerMenu li a{
+	color:#fff;
+}
+
 #s {
     width: 99.6%;
     border: 1px solid #E2E2E2;
@@ -1067,7 +1091,7 @@ footer .sbutton {
 /*-[ Sidebar ]---------------------*/
 .sidebar.c-4-12 {
     float: right;
-    width: 31.8%;
+    width: 30%;
     padding: 0 0.1%;
     line-height: 20px;
     max-width: 300px;
@@ -1886,7 +1910,6 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	font-size:12px;
 	line-height:12px;
 	border:1px solid #ccc;
-	border-top:0px;
 	background:#f0f8ec;
 }
 

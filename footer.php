@@ -8,6 +8,10 @@
 
 <footer>
 	<?php dynamic_sidebar( 'Footer Widget 4' ) ;?>
+	<div class="clear"></div>
+	<div class="footerMenu">
+			<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+	</div>
 </footer>
 <!--footer-->
 <!-- 

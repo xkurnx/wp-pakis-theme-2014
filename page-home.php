@@ -1,17 +1,18 @@
 <?php $mts_options = get_option('point'); ?>
 <?php get_header(); ?>
 
-<div class = 'featuredArticles'>
- <?php
- dynamic_sidebar( 'Slider' );
- ?> 
-</div>
+<div id="page" class="single">
+		<div class = 'featuredArticles'>
+		 <?php
+		 dynamic_sidebar( 'Slider' );
+		 ?> 
+		</div>
 
-<div class = 'recentNews'>
+		<div class = 'recentNews'>
 
-<?php  
+				<?php  
 				// ambil berita terbaru
-				query_posts( 'posts_per_page=3&category_name=berita-internal' );
+				query_posts( 'posts_per_page=2&category_name=berita-internal' );
 				$j=0; $i =0; 
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article class="<?php echo 'pexcerpt'.$i++?> post excerpt <?php echo (++$j % 2 == 0) ? 'last' : ''; ?>">
@@ -48,13 +49,12 @@
 
 </div>
 
-<div class="topBanner">
- <?php
- dynamic_sidebar( 'Banner #1' );
- ?> 
-</div>
+		<div class="topBanner">
+		 <?php
+		 dynamic_sidebar( 'Banner #1' );
+		 ?> 
+		</div>
 
-<div id="page" class="single">
 	<div class="content">
 		<article class="article">
 			<div id="content_box" >
@@ -94,7 +94,15 @@
 					<h5><?php _e('No results found. We apologize for any inconvenience, please hit back on your browser or use the search form below.', 'mythemeshop'); ?></h5>
 					<?php get_search_form(); ?>
 				</div><!--noResults-->
-			<?php endif; ?>			
+			<?php endif; ?>	
+			
+			<?php
+			$category_id = get_cat_ID( 'news' );
+			// Get the URL of this category
+			$category_link = get_category_link( $category_id );
+			?>
+			<a href="<?php echo esc_url( $category_link ); ?>" title="Indeks Berita">Indeks Berita</a>
+			<br />
 				
 			</div>
 			
@@ -118,7 +126,7 @@
 			<?php dynamic_sidebar( 'Footer Widget 3' ) ;?>
 			</div>	
 
-			<iframe id="blockrandom" name="" src="http://internal.pa-kisaran.net/grafikperkarahome.php" width="650" height="300" scrolling="no" align="top" frameborder="0" class="wrapper">
+			<iframe id="grafikPerkara" name="" src="http://internal.pa-kisaran.net/grafikperkarahome.php" width="650" height="300" scrolling="no" align="top" frameborder="0" class="wrapper">
 			Tidak Ada Iframe</iframe>	
 			
 		</article>
