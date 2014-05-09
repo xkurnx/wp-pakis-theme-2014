@@ -9,13 +9,48 @@ if( function_exists('FA_display_slider') ){
 ?>
 </div>
 
-<div class = 'topSidebar'>
- <?php
- dynamic_sidebar( 'Featured Section' );
- ?> 
+<div class = 'recentNews'>
+
+<?php  
+				// ambil berita terbaru
+				query_posts( 'posts_per_page=3&category_name=berita-internal' );
+				$j=0; $i =0; 
+				if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<article class="<?php echo 'pexcerpt'.$i++?> post excerpt <?php echo (++$j % 2 == 0) ? 'last' : ''; ?>">
+					<!-- <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="nofollow" id="featured-thumbnail">
+						<?php if ( has_post_thumbnail() ) { ?> 
+							<?php echo '<div class="featured-thumbnail">'; the_post_thumbnail('featured',array('title' => '')); echo '</div>'; ?>
+						<?php } else { ?>
+							<div class="featured-thumbnail">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/nothumb.png" class="attachment-featured wp-post-image" alt="<?php the_title(); ?>">
+							</div>
+						<?php } ?>
+					</a>
+					-->
+					<header>						
+						<h3 class="title">
+							<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
+						</h3>
+				
+					</header><!--.header-->
+					<div class="post-content image-caption-format-1">
+						<p>
+							<?php echo mts_excerpt(10);?>
+						</p>
+					
+					</div>
+				</article>
+			<?php endwhile; else: ?>
+				<div class="no-results">
+					<h5><?php _e('No results found. We apologize for any inconvenience, please hit back on your browser or use the search form below.', 'mythemeshop'); ?></h5>
+					<?php get_search_form(); ?>
+				</div><!--noResults-->
+			<?php endif; ?>		
+
+
 </div>
 
-<div class="banner">
+<div class="topBanner">
 	 <?php
  dynamic_sidebar( 'Banner #1' );
  ?> 
@@ -65,24 +100,27 @@ if( function_exists('FA_display_slider') ){
 				
 			</div>
 			
-			<h3 class="sectionTile">Profile Pengadilan</h3>
+			<h3 class="sectionTitle"><span>Profile Pengadilan</span></h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 1' ) ;?>
 			</div>
 			
-			<h3 class="sectionTile">Informasi Keperkaraan</h3>
+			<h3 class="sectionTitle">Informasi Keperkaraan</h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 2' ) ;?>
 			</div>
 			
-			<h3 class="sectionTile">Pengawasan & transaparansi</h3>
+			<h3 class="sectionTitle">Pengawasan &amp; transaparansi</h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 3' ) ;?>
 			</div>
 			
-			
-			
+			<h3 class="sectionTitle">Pengaduan &amp; Informasi</h3>
+			<div class="widgetsRows">
+			<?php dynamic_sidebar( 'Footer Widget 3' ) ;?>
+			</div>		
 			
 		</article>
 		<?php get_sidebar(); ?>
+		<?php get_template_part( 'footer-section');?>
 <?php get_footer(); ?>

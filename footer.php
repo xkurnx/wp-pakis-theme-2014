@@ -1,6 +1,10 @@
 <?php $mts_options = get_option('point'); ?>
 		</div><!--.content-->
 	</div><!--#page-->
+
+<div class="footerSection">
+testing
+</div>	
 <footer>
 	<?php if(isset($mts_options['mts_featured_carousel'])) { if($mts_options['mts_featured_carousel'] == '1' && $mts_options['mts_featured_carousel'] != '') { ?>
 		<div class="carousel">
@@ -28,7 +32,9 @@
 		</div>
 	<?php }} ?>
 </footer><!--footer-->
-<div class="copyrights"><?php mts_copyrights_credit(); ?></div>
+<!-- 
+<div class="copyrights"></div>
+-->
 <?php wp_footer(); ?>
 </div><!--.main-container-->
 </body>

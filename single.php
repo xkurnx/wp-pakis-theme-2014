@@ -67,21 +67,10 @@
 								<?php } echo '</ul></div></div>'; }} wp_reset_query(); ?>
 							<!-- End Related Posts -->
 						<?php }?>  
-						<?php if($mts_options['mts_author_box'] == '1') { ?>
-							<!-- Start Author Box -->
-							<div class="postauthor-container">
-								<h4><?php _e('About The Author', 'mythemeshop'); ?></h4>
-								<div class="postauthor">
-									<?php if(function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), '100' );  } ?>
-									<h5><?php the_author_meta( 'nickname' ); ?></h5>
-									<p><?php the_author_meta('description') ?></p>
-								</div>
-							</div>
-							<!-- End Author Box -->
-						<?php }?>  
+						
 					</div>
 				</div>
-				<?php comments_template( '', true ); ?>
+				
 			<?php endwhile; ?>
 		</article>
 		<!-- End Article -->

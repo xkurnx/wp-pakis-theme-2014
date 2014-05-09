@@ -152,6 +152,9 @@
         background: #FAFAFA;
         border: 0;
     }
+	
+	.recentNews { width:100%}
+	
 }
 @media screen and (max-width:865px) {
     #header { 
@@ -363,4 +366,5 @@
     }
     .post.excerpt .post-content { overflow: visible }
     .top { left: 42% }
+	
 }

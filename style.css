@@ -17,20 +17,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
+    font-size: 1em;
     vertical-align: baseline;
+	line-height:16px;
 }
 html {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
+
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
 ol, ul { list-style: none }
 blockquote, q {
     quotes: none;
     font-family: georgia;
-    font-size: 18px;
     font-style: italic;
 }
 blockquote:before, q:before, q:after {
@@ -185,7 +186,11 @@ h6 {
     line-height: 1.4;
 }
 .sub-title { font-size: 12px }
-p { margin-bottom: 20px }
+
+p { 
+	margin-bottom: 20px;
+	line-height:1.5em;
+ }
 a {
     text-decoration: none;
     color: #38B7EE;
@@ -358,7 +363,7 @@ a.header-button {
     float: right;
 }
 .secondary-navigation a {
-    font-size: 16px;
+    font-size: 14px;
     color: #2a2a2a;
     text-align: left;
     text-decoration: none;
@@ -547,7 +552,11 @@ nav a#pull { display: none }
     padding-bottom: 0;
     overflow: hidden;
 }
-.post.excerpt .post-content p { margin-bottom: 0 }
+.post.excerpt .post-content p { 
+	margin-bottom: 0;
+	font-size:13px;
+	font-family:arial;
+}
 .post-single-content { overflow: hidden }
 .readMore {
     float: right;
@@ -1833,12 +1842,27 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	float:left;
 }
 
-.topSidebar {
+
+.recentNews {
 	float:left;
 	padding:10px;
-	width:300px;
+	width:230px;
+	font-size:12px;
+	line-height:12px;
+	border:1px solid #ccc;
+	border-top:0px;
 }
-.banner{
+
+.recentNews h3{
+	font-size:14px;
+}
+
+.recentNews .post.excerpt{
+	margin-bottom:6px;
+	padding-bottom:5px;
+}
+
+.topBanner{
 	float:left;
 }
 
@@ -1847,11 +1871,25 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	display:block;
 }
 
-h3.sectionTile{
+.widgetsRows h3{
+	font-size:14px;
+}
+
+.widgetsRows li li{
+	margin:0px;
+	padding:0px;
+}
+
+h3.sectionTitle{
 	clear:both;
 }
 
 .widgetsRows .widget{
 	float:left;
 	width:200px;
+}
+
+.footerSection{
+	border-top:1px solid #E2E2E2;
+	background:#EEE;
 }
