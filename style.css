@@ -17,7 +17,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 1em;
+    font-size: 14px;
     vertical-align: baseline;
 	line-height:16px;
 }
@@ -135,7 +135,7 @@ dd {
 }
 /*-[ Framework ]--------------------*/
 body {
-    font: 14px/23px Droid Sans, sans-serif;
+    font: 14px/23px 'Roboto', sans-serif,arial;;
     color: #555;
     background-color: #FFFFFF;
 }
@@ -184,6 +184,11 @@ h6 {
     font-size: 16px;
     line-height: 1.4;
 }
+
+h3 span.color{
+	color:red;
+}
+
 .sub-title { font-size: 12px }
 
 p { 
@@ -223,6 +228,7 @@ a:link, a:visited, a:active { text-decoration: none }
     padding: 0;
     max-width: 940px;
     overflow: hidden;
+	padding-top:20px;
 }
 #page .content {
     width: 100%;
@@ -280,9 +286,9 @@ body > header {
 }
 #header {
     position: relative;
-    width: 98.1%;
+    width: 100%;
     float: left;
-    padding: 0 0 0 2%;
+    padding: 0 0 0 0;
     background: #F5F5F5;
 }
 #header:after {
@@ -302,6 +308,14 @@ body > header {
     margin: 20px 0;
     text-transform: uppercase;
 }
+
+#header .image{
+	height:100px;
+	width:100%;
+	display:block;
+	background:url('images/header.gif');
+}
+
 #header .image-logo { margin: 11px 0 }
 #logo a {
     float: left;
@@ -354,12 +368,38 @@ a.header-button {
     font-weight: bold;
     font-size: 14px;
 }
+
+.main-header ul.menu{
+	float:left;
+}
+
+.main-header .header-small-menu{
+	background:#000;
+	width:100%;
+	height:30px;
+	border-bottom:2px solid #61a001;
+}
+
+.main-header ul.menu li{
+	float:left;
+	margin-left:10px;
+	padding-top:4px;
+}
+
+.main-header ul.menu li a{
+	display:block;
+	padding:3px 5px;
+}
+
+.main-header ul.menu li a:hover{
+	background:#fff;
+}
+
 /*-[ Navigation ]-----------------*/
 .secondary-navigation {
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    float: right;
 }
 .secondary-navigation a {
     font-size: 14px;
@@ -476,7 +516,7 @@ a.header-button {
 #navigation ul li:hover ul {
     left: -1px;
     opacity: 1;
-    top: 50px;
+    top: 33px;
 }
 #navigation ul ul ul {
     top: -1px;
@@ -554,7 +594,7 @@ nav a#pull { display: none }
 .post.excerpt .post-content p { 
 	margin-bottom: 0;
 	font-size:13px;
-	font-family:arial;
+	font-family: 'Roboto', sans-serif,arial;
 }
 .post-single-content { overflow: hidden }
 .readMore {
@@ -611,7 +651,7 @@ nav a#pull { display: none }
 }
 .title {
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1em;
     clear: both;
     margin-bottom: 0;
 }
@@ -644,7 +684,7 @@ article header {
     margin-bottom: 2px;
     overflow: hidden;
 }
-.single article header { margin-bottom: 10px }
+
 .error404 .single_post { width: 100% }
 .single_post .post-info a, .post-info a { color: #EE210B }
 .article img.left, .article img.alignleft, .wp-caption.alignleft {
@@ -668,7 +708,7 @@ article header {
     clear: both;
 }
 .article ul {
-    margin: 1.5em 0 1.571em 1.9em;
+    margin: 4px;
     list-style-type: square;
 }
 .article ol {
@@ -1902,6 +1942,9 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	float:left;
 }
 
+.featuredArticles .widget{
+	margin-bottom:0px;
+}
 
 .recentNews {
 	float:left;
@@ -1911,6 +1954,7 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	line-height:12px;
 	border:1px solid #ccc;
 	background:#f0f8ec;
+	height:280px;
 }
 
 .recentNews h3{
@@ -1924,6 +1968,26 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 
 .topBanner{
 	float:left;
+	margin-left:10px;
+}
+
+.featuredIcons {
+	margin-bottom:5px;
+	float:left;
+}
+
+.featuredIcons .jadwalSidang,
+.featuredIcons .keuanganPerkara,
+.featuredIcons .statistikPerkara{
+	float:left;
+	width:200px;
+	height:80px;
+	background:red;
+	margin-right:11px;
+	text-align:center;
+}
+.featuredIcons .statistikPerkara{
+	margin-right:0px;
 }
 
 .widgetsRows{
@@ -1948,13 +2012,14 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	clear:both;
 	background:url('images/stripe-bg.png');
 	padding:0px;
-	line-height:1em;
+	line-height:12px;
 }
 
 .sectionTitle span{
 	background:#fff;
 	padding:0px 3px 0px 0px;
-}
+	font-size:16px;
+}	
 
 .widgetsRows .widget{
 	float:left;

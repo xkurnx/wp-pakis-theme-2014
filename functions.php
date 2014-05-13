@@ -35,6 +35,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(
         array(
           'primary-menu' => 'Primary Menu',
+		  'header-small-menu' => 'Header Small Menu',		  
 		  'footer-menu' => 'Footer Menu'
         )
     );
@@ -152,6 +153,7 @@ function mts_widgets_init() {
 		'after_title' => '</h3>',
 	));
 	
+	
 	register_sidebar(array(
 		'name'=>'Slider',
 		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
@@ -172,6 +174,15 @@ function mts_widgets_init() {
 	
 	register_sidebar(array(
 		'name'=>'Banner #1',
+		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
+		'before_widget' => '<li id="%1$s" class="widget widget-sidebar %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	register_sidebar(array(
+		'name'=>'Banner #2',
 		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
 		'before_widget' => '<li id="%1$s" class="widget widget-sidebar %2$s">',
 		'after_widget' => '</li>',
@@ -206,6 +217,16 @@ function mts_widgets_init() {
 	
 	register_sidebar(array(
 		'name'=>'Footer Widget 4',
+		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
+		'before_widget' => '<li id="%1$s" class="widget widget-sidebar %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	
+	register_sidebar(array(
+		'name'=>'Menu Header',
 		'description'   => __( 'Appears on posts and pages', 'mythemeshop' ),
 		'before_widget' => '<li id="%1$s" class="widget widget-sidebar %2$s">',
 		'after_widget' => '</li>',

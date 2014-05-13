@@ -12,7 +12,7 @@
 
 				<?php  
 				// ambil berita terbaru
-				query_posts( 'posts_per_page=2&category_name=berita-internal' );
+				query_posts( 'posts_per_page=4&category_name=berita-internal' );
 				$j=0; $i =0; 
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article class="<?php echo 'pexcerpt'.$i++?> post excerpt <?php echo (++$j % 2 == 0) ? 'last' : ''; ?>">
@@ -30,14 +30,17 @@
 						<h3 class="title">
 							<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
 						</h3>
+						<div class="post-info"><span class="theauthor"><?php the_author_posts_link(); ?></span> | <span class="thetime"><?php the_time( get_option( 'date_format' ) ); ?></span></div>
+
 				
 					</header><!--.header-->
-					<div class="post-content image-caption-format-1">
+					<!-- <div class="post-content image-caption-format-1">
 						<p>
 							<?php echo mts_excerpt(10);?>
 						</p>
 					
 					</div>
+					-->
 				</article>
 			<?php endwhile; else: ?>
 				<div class="no-results">
@@ -57,6 +60,12 @@
 
 	<div class="content">
 		<article class="article">
+			<div class="featuredIcons">
+					<a class="jadwalSidang" href="#">Jadwal Sidang</a>
+					<a class="keuanganPerkara" href="#">Keuangan Perkara</a>
+					<a class="statistikPerkara" href="#">Statistik Perkara</a>
+			</div>
+			
 			<div id="content_box" >
 				
 				<?php  
@@ -101,33 +110,37 @@
 			// Get the URL of this category
 			$category_link = get_category_link( $category_id );
 			?>
+			<br />
 			<a href="<?php echo esc_url( $category_link ); ?>" title="Indeks Berita">Indeks Berita</a>
 			<br />
-				
-			</div>
+	</div>
 			
-			<h3 class="sectionTitle"><span>Profile Pengadilan</span></h3>
+			<div id="banner-2">
+				<?php  dynamic_sidebar( 'Banner #2' ); 	 ?> 
+			</div>	
+			<h3 class="sectionTitle"><span><span class="color">Profile</span> Pengadilan</span></h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 1' ) ;?>
 			</div>
 			
-			<h3 class="sectionTitle"><span>Informasi Keperkaraan</span></h3>
+			<h3 class="sectionTitle"><span><span class="color">Informasi</span> Keperkaraan</span></h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 2' ) ;?>
 			</div>
 			
-			<h3 class="sectionTitle"><span>Pengawasan &amp; transaparansi</span></h3>
+			<h3 class="sectionTitle"><span><span class="color">Pengawasan</span> &amp; transaparansi</span></h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 3' ) ;?>
 			</div>
 			
-			<h3 class="sectionTitle"><span>Pengaduan &amp; Informasi</span></h3>
+			<h3 class="sectionTitle"><span><span class="color">Pengaduan</span> &amp; Informasi</span></h3>
 			<div class="widgetsRows">
-			<?php dynamic_sidebar( 'Footer Widget 3' ) ;?>
+			<?php dynamic_sidebar( 'Footer Widget 4' ) ;?>
 			</div>	
-
+			<!--
 			<iframe id="grafikPerkara" name="" src="http://internal.pa-kisaran.net/grafikperkarahome.php" width="650" height="300" scrolling="no" align="top" frameborder="0" class="wrapper">
 			Tidak Ada Iframe</iframe>	
+			-->
 			
 		</article>
 		<?php get_sidebar(); ?>

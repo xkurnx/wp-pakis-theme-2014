@@ -11,6 +11,7 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<?php mts_meta(); ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
 <body id ="blog" <?php body_class('main'); ?>>
@@ -19,7 +20,7 @@
 			<div class="trending-articles">
 				<ul>
 					<li class="firstlink"><?php _e('Now Trending','mythemeshop'); ?>:</li>
-					<?php $i = 1; $my_query = new wp_query( 'cat='.$mts_options['mts_trending_articles_cat'].'&posts_per_page=4&ignore_sticky_posts=1' ); ?>
+					<?php $i = 1; $my_query = new wp_query( 'category_name=berita-internal&posts_per_page=4&ignore_sticky_posts=1' ); ?>
 					<?php if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
 						<li class="trendingPost <?php if($i % 4 == 0){echo 'last';} ?>">
 							<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php mts_short_title('...', 24); ?></a>
@@ -30,23 +31,16 @@
 		<?php }} ?>
 		<header class="main-header">
 			<div id="header">
-				<?php if ($mts_options['mts_logo'] != '') { ?>
-					<?php if( is_front_page() || is_home() || is_404() ) { ?>
-						<h1 id="logo" class="image-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo $mts_options['mts_logo']; ?>" alt="<?php bloginfo( 'name' ); ?>"></a></h1>
-					<?php } else { ?>
-						<h2 id="logo" class="image-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo $mts_options['mts_logo']; ?>" alt="<?php bloginfo( 'name' ); ?>"></a></h2>
-					<?php } ?>
-				<?php } else { ?>
-					<?php if( is_front_page() || is_home() || is_404() ) { ?>
-						<h1 id="logo" class="text-logo"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php } else { ?>
-						<h2 id="logo" class="text-logo"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h2>
-					<?php } ?>
-				<?php } ?>
+				<div class="image">
+					
+				</div>
+				<div class="header-small-menu">
+				<?php wp_nav_menu( array( 'theme_location' => 'header-small-menu', 'menu_class' => 'menu', 'container' => ''));?>
+				</div>
 				<div class="secondary-navigation">
 					<nav id="navigation" >
 						<?php if ( has_nav_menu( 'primary-menu' ) ) { ?>
-							<?php $walker = new mts_Walker; wp_nav_menu( array( 'theme_location' => 'primary-menu', 'menu_class' => 'menu', 'container' => '', 'walker' => $walker ) ); ?>
+							<?php $walker = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'menu_class' => 'menu', 'container' => '') ); ?>
 						<?php } else { ?>
 							<ul class="menu">
 								<?php wp_list_categories('title_li='); ?>

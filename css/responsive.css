@@ -163,7 +163,9 @@
 	.recentNews { width:100%; border:0px;}
 	.topBanner,
 	aside,
-	#grafikPerkara{ display:none;}
+	#grafikPerkara,
+	.featuredIcons { display:none;}
+	
 	
 }
 @media screen and (max-width:865px) {

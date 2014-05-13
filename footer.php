@@ -3,7 +3,7 @@
 	</div><!--#page-->
 
 <div class="footerSection">
-	testing
+	
 </div>	
 
 <footer>
