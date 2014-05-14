@@ -61,9 +61,10 @@
 	<div class="content">
 		<article class="article">
 			<div class="featuredIcons">
-					<a class="jadwalSidang" href="#">Jadwal Sidang</a>
-					<a class="keuanganPerkara" href="#">Keuangan Perkara</a>
-					<a class="statistikPerkara" href="#">Statistik Perkara</a>
+					<a class="infoPerkara" href="/transparansi/transparansi-perkara/informasi-perkara/informasi-perkara/"></a>
+					<a class="jadwalSidang" href="/transparansi/transparansi-perkara/informasi-perkara/jadwal-sidang/"></a>
+					<a class="keuanganPerkara last" href="/transparansi/transparansi-perkara/informasi-perkara/keuangan-perkara/"></a>
+					
 			</div>
 			
 			<div id="content_box" >

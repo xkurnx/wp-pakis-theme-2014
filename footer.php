@@ -10,7 +10,9 @@
 	<?php dynamic_sidebar( 'Footer Widget 4' ) ;?>
 	<div class="clear"></div>
 	<div class="footerMenu">
-			<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+			Pengadilan Agama Kisaran &copyright; 2012<br />
+Jl. Jend. Ahmad Yani No. 73 Kisaran Sumatera Utara 21214. GPS Waypoint Latitude: N 2.97467, Longitude : E 99.61254 <br />
+email : admin@pa-kisaran.net | telp. (0623) 41890 | fax.(0623) 44665
 	</div>
 </footer>
 <!--footer-->

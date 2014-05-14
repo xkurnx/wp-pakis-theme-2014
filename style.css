@@ -388,7 +388,8 @@ a.header-button {
 
 .main-header ul.menu li a{
 	display:block;
-	padding:3px 5px;
+	padding:3px 5px 4px 5px;
+	font-size:1.1em;
 }
 
 .main-header ul.menu li a:hover{
@@ -402,17 +403,13 @@ a.header-button {
     max-width: 100%;
 }
 .secondary-navigation a {
-    font-size: 14px;
+    font-size: 12px;
     color: #2a2a2a;
     text-align: left;
     text-decoration: none;
     line-height: 1.4;
     padding: 5px 10px 0px 10px;
-	min-height: 30px;
-    font-weight: bold;
-    border-right: 1px solid #E2E2E2;
-    border-left: 1px solid #fff;
-    text-transform: uppercase;
+	min-height: 22px;
 }
 .secondary-navigation a:hover, .secondary-navigation .sfHover { background: #fff }
 .secondary-navigation li li a { line-height: 1 }
@@ -463,13 +460,14 @@ a.header-button {
     font-size: 13px;
     width: 100%;
     float: left;
+	background:#7bcade;
 }
 #navigation ul { margin: 0 auto }
 #navigation .menu { float: left }
 #navigation ul li {
     float: left;
     position: relative;
-    margin-left: 0;
+	margin-left:5px;
 }
 #navigation > ul li:first-child a { border-left: 1px solid #E2E2E2}
 #navigation > ul li:last-child a { border-right: 0 }
@@ -665,7 +663,7 @@ nav a#pull { display: none }
     margin-bottom: 5px;
     padding-top: 0;
     float: left;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 1.2;
     padding: 0;
 }
@@ -806,7 +804,14 @@ article header {
 .widget_nav_menu ul li a {
     font-size: 14px;
     font-weight: normal;
+	background:url('images/bullet3.png') no-repeat top  left;
+	padding-left:10px;
 }
+
+.widget_nav_menu ul li a:hover{
+	background-position:0px -22px;
+}
+
 .widget_nav_menu .sub-menu {
     margin-top: 8px;
     background: transparent;
@@ -1063,6 +1068,8 @@ footer .footerMenu{
 	border-top:1px dotted #ccc;
 	margin-top:10px;
 	padding-top:10px;
+	font-size:11px;
+	color:#fff;
 }
 
 footer .footerMenu ul{
@@ -1129,6 +1136,27 @@ footer .footerMenu li a{
 }
 .ad-125 img { border: none }
 /*-[ Sidebar ]---------------------*/
+
+.sidebar h3{
+	clear:both;
+}
+
+.sidebar .fancyform{
+	clear:both;
+	background:url('images/bg-orange.png') repeat-x;
+	
+}
+
+.sidebar .fancyform .title{
+	height:40px;
+	background:url('images/box_title_cariperkara.png') 5px 0px no-repeat;
+}
+
+.sidebar .fancyform .content{
+	margin-top:0px;
+}	
+	
+
 .sidebar.c-4-12 {
     float: right;
     width: 30%;
@@ -1138,7 +1166,7 @@ footer .footerMenu li a{
 }
 .sidebar.c-4-12 a { color: #2A2A2A }
 .widget {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     float: left;
     width: 100%;
     list-style: none;
@@ -1150,7 +1178,6 @@ footer .footerMenu li a{
     font-size: 12px;
 }
 .widget li {
-    list-style-type: square;
     margin-left: 17px;
     margin-bottom: 7px;
 }
@@ -1160,7 +1187,6 @@ footer .footerMenu li a{
 }
 .widget h3 {
     font-size: 20px;
-    line-height: 1;
     margin: 0 0 10px 0;
 }
 /*-[ Social Profile Widget ]--------------------------*/
@@ -1978,7 +2004,7 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 
 .featuredIcons .jadwalSidang,
 .featuredIcons .keuanganPerkara,
-.featuredIcons .statistikPerkara{
+.featuredIcons .infoPerkara{
 	float:left;
 	width:200px;
 	height:80px;
@@ -1986,9 +2012,25 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	margin-right:11px;
 	text-align:center;
 }
-.featuredIcons .statistikPerkara{
+.featuredIcons .last{
 	margin-right:0px;
 }
+
+.featuredIcons .infoPerkara{
+	background:url('images/iconInfoPerkara.png') #8cb129 no-repeat;
+}
+
+.featuredIcons .jadwalSidang{
+	background:url('images/iconJadwalSidang.png') #f6c131 no-repeat;
+}
+
+.featuredIcons .keuanganPerkara{
+	background:url('images/iconkeuanganPerkara.png') #7bcade no-repeat;
+}
+
+.featuredIcons a:hover{
+	background-color:#f3be06
+}	
 
 .widgetsRows{
 	clear:both;
@@ -1996,16 +2038,20 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 	min-width:200px;
 }
 
+.sidebar h3,
 .widgetsRows h3{
 	font-size:14px;
 	border-bottom:1px solid #2c9c1a;
-	padding-bottom:3px;
 	margin-right:10px;
+	background:#8cb129;
+	color:#fff;
+	padding:2px 0px 2px 5px;	
 }
 
 .widgetsRows li li{
 	margin:0px;
 	padding:0px;
+	margin-bottom:2px;
 }
 
 .sectionTitle{
@@ -2024,6 +2070,8 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 .widgetsRows .widget{
 	float:left;
 	width:205px;
+	padding:5px;
+	margin:0px 3px;
 }
 
 .footerSection{

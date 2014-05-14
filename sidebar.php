@@ -32,7 +32,7 @@
 			<h3>Berita Populer</h3>	
 			<?php  
 				// ambil berita terbaru
-				query_posts( 'posts_per_page=2&category_name=berita-internal' );
+				query_posts( 'posts_per_page=3&category_name=berita-internal' );
 				$j=0; $i =0; 
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article class="<?php echo 'pexcerpt'.$i++?> post excerpt <?php echo (++$j % 2 == 0) ? 'last' : ''; ?>">
@@ -47,9 +47,9 @@
 					</a>
 					-->
 					<header>						
-						<h3 class="title">
+						<h4 class="title">
 							<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
-						</h3>
+						</h4>
 						<div class="post-info"><span class="theauthor"><?php the_author_posts_link(); ?></span> | <span class="thetime"><?php the_time( get_option( 'date_format' ) ); ?></span></div>
 
 				
@@ -68,4 +68,14 @@
 				</div><!--noResults-->
 			<?php endif; ?>			
 	</div><!--sidebars-->
+	
+	<div class="fancyform">
+		<div class="title"></div>
+		<div class="content">
+			<form method="GET">
+				<input type="text" name="">
+			</form>
+			
+		</div>
+	</div>
 </aside>
