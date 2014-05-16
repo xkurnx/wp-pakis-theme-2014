@@ -112,8 +112,8 @@
 			$category_link = get_category_link( $category_id );
 			?>
 			<br />
-			<a href="<?php echo esc_url( $category_link ); ?>" title="Indeks Berita">Indeks Berita</a>
-			<br />
+			<a href="<?php echo esc_url( $category_link ); ?>" title="Indeks Berita">+ Indeks Berita</a>
+			<br /><br />
 	</div>
 			
 			<div id="banner-2">

@@ -70,10 +70,37 @@
 	</div><!--sidebars-->
 	
 	<div class="fancyform">
+	<?php
+		$page_info = get_page_by_path('transparansi/transparansi-perkara/informasi-perkara/');
+	?>
 		<div class="title"></div>
 		<div class="content">
-			<form method="GET">
-				<input type="text" name="">
+			<form method="post" action="<?php echo get_permalink($page_info->ID);?>">
+				<div class="row"><label>Nama </label><input type="text" name="nama"></div>
+				<div class="row"><label>No. Perk </label><input type="text" style="width:50px" name="nomorperkara">
+				<select name="pdt">
+					<option value="G" selected="">Pdt.G</option>
+					<option value="P">Pdt.P</option>
+				</select>
+				<select name="tahunperkara">
+											<option value="2014" selected="">2014</option>";
+														<option value="2013">2013</option>";
+														<option value="2012">2012</option>";
+														<option value="2011">2011</option>";
+														<option value="2010">2010</option>";
+														<option value="2009">2009</option>";
+														<option value="2008">2008</option>";
+														<option value="2007">2007</option>";
+														<option value="2006">2006</option>";
+														<option value="2005">2005</option>";
+														<option value="2004">2004</option>";
+														<option value="2003">2003</option>";
+														<option value="2002">2002</option>";
+														<option value="2001">2001</option>";
+														<option value="2000">2000</option>";
+											</select>
+				</div>	
+			<input class="btnSubmit" type="submit" value="Lihat">				
 			</form>
 			
 		</div>

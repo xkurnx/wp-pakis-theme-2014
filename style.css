@@ -234,6 +234,9 @@ a:link, a:visited, a:active { text-decoration: none }
     width: 100%;
     display: block;
     float: left;
+}
+
+.single .content{
 	margin-top:15px;
 }
 
@@ -469,7 +472,6 @@ a.header-button {
     position: relative;
 	margin-left:5px;
 }
-#navigation > ul li:first-child a { border-left: 1px solid #E2E2E2}
 #navigation > ul li:last-child a { border-right: 0 }
 #navigation ul .header-search { float: right }
 #navigation > ul > li:last-child { border-right: none }
@@ -1144,7 +1146,9 @@ footer .footerMenu li a{
 .sidebar .fancyform{
 	clear:both;
 	background:url('images/bg-orange.png') repeat-x;
-	
+	float: left;
+	width: 280px;
+
 }
 
 .sidebar .fancyform .title{
@@ -1153,10 +1157,47 @@ footer .footerMenu li a{
 }
 
 .sidebar .fancyform .content{
-	margin-top:0px;
+	padding: 10px 0px;
+	margin-top: 0px;
+	padding-left:10px;
 }	
-	
 
+.sidebar .fancyform .row{
+	margin-bottom:5px;
+}
+	
+.sidebar .fancyform label{
+	float:left;
+	width:60px;
+	clear:right;
+	margin-top:2px;
+	color:#fff;
+}
+
+.sidebar .fancyform input{
+	height:20px;
+	padding:2px;
+	width:184px;
+}	
+
+.sidebar .fancyform select,
+.sidebar .fancyform input{
+	padding:3px;
+	border:1px solid #cd8606;
+	-moz-box-shadow: inset 0 2px 5px #999;
+	-webkit-box-shadow: inset 0 2px 5px #999;
+	box-shadow: inset 0 2px 5px #999;
+}
+	
+.sidebar .fancyform 	.btnSubmit{
+	background:##ccc;
+	padding:4px 10px;
+	width:250px;
+	-moz-box-shadow:none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	height:auto;
+}
 .sidebar.c-4-12 {
     float: right;
     width: 30%;
