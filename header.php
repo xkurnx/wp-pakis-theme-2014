@@ -11,8 +11,11 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<?php mts_meta(); ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='<?php echo get_template_directory_uri(); ?>/css/jquery.fancybox-1.3.4.css' rel='stylesheet' type='text/css'>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.fancybox-1.3.4.pack.js"></script>
+	
 </head>
 <body id ="blog" <?php body_class('main'); ?>>
 	<div class="main-container">

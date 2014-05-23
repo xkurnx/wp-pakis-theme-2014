@@ -124,20 +124,11 @@
 			<?php dynamic_sidebar( 'Footer Widget 1' ) ;?>
 			</div>
 			
-			<h3 class="sectionTitle"><span><span class="color">Informasi</span> Keperkaraan</span></h3>
+			<h3 class="sectionTitle"><span><span class="color">Sindikasi</span> Berita</span></h3>
 			<div class="widgetsRows">
 			<?php dynamic_sidebar( 'Footer Widget 2' ) ;?>
 			</div>
 			
-			<h3 class="sectionTitle"><span><span class="color">Pengawasan</span> &amp; transaparansi</span></h3>
-			<div class="widgetsRows">
-			<?php dynamic_sidebar( 'Footer Widget 3' ) ;?>
-			</div>
-			
-			<h3 class="sectionTitle"><span><span class="color">Pengaduan</span> &amp; Informasi</span></h3>
-			<div class="widgetsRows">
-			<?php dynamic_sidebar( 'Footer Widget 4' ) ;?>
-			</div>	
 			<!--
 			<iframe id="grafikPerkara" name="" src="http://internal.pa-kisaran.net/grafikperkarahome.php" width="650" height="300" scrolling="no" align="top" frameborder="0" class="wrapper">
 			Tidak Ada Iframe</iframe>	

@@ -24,6 +24,7 @@ jQuery(document).ready(function() {
 	if(navigator.userAgent.match(/opera/i)){
 		scrollDes = 'html';
 	}
+	
 	//show ,hide
 	jQuery(window).scroll(function () {
 		if (jQuery(this).scrollTop() > 160) {
@@ -41,6 +42,18 @@ jQuery(document).ready(function() {
 			}
 		}
 	});
+	
+	jQuery("a.modal").fancybox({
+						'width'				: 750,
+						'height'			: 340,
+						'autoScale'     	: false,
+						'transitionIn'	:	'elastic',
+				'transitionOut'	:	'elastic',
+				'speedIn'		:	600, 
+				'speedOut'		:	200, 
+				'type'			: 'iframe'
+	});
+	
 	// scroll to top when click 
 	jQuery('#move-to-top').click(function () {
 		jQuery(scrollDes).animate({ 
@@ -50,6 +63,9 @@ jQuery(document).ready(function() {
 		});
 	});
 	//END -- MOVE-TO-TOP ARROW
+	
+	
+	
 });
 
 /*----------------------------------------------------
@@ -100,4 +116,22 @@ jQuery(".togglec").hide();
 	jQuery(this).toggleClass("toggleta").next(".togglec").slideToggle("normal");
 	   return true;
 	});
+	
+jQuery('.toggle table').hide();
+
+ jQuery('.toggle a').click(function(){
+    jQuery('.toggle table').hide();
+    jQuery(this).parent().find('table').show();
+  });
+
+ // jQuery('table tr:first,table.category  tr:first').addClass('head');
+		
+  /* added 25/12/12 */
+//  jQuery('.highlight').effect("highlight", {}, 3000);
+//  jQuery('.highlight').delay(4000).effect("highlight", {}, 3000);
+
+
+ 
 });
+
+

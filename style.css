@@ -628,7 +628,7 @@ nav a#pull { display: none }
 }
 #featured-thumbnail {
     float: left;
-    max-width: 220px;
+    max-width: 180px;
     margin-top: 4px;
     margin-bottom: 0;
     margin-right: 3%;
@@ -791,19 +791,20 @@ article header {
     padding: 2px 0 2px 15px;
 }
 /*-[ Custom Nav Widget ]---------------------------*/
-.widget_nav_menu [class^="icon-"], .widget_nav_menu [class*=" icon-"], .widget_nav_menu li {
+.widgetsRows .widget_nav_menu [class^="icon-"], 
+.widgetsRows .widget_nav_menu [class*=" icon-"], 
+.widgetsRows .widget_nav_menu li {
     display: list-item;
     list-style: none;
     position: relative;
     margin-left: 0;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    border-bottom: 0;
+    padding:2px 0px;
+	border-bottom: 0;
     border-top: 0;
     margin-bottom: 0;
 }
-.widget_nav_menu [class^="icon-"] > a, .widget_nav_menu [class*=" icon-"] > a { padding-left: 5px }
-.widget_nav_menu ul li a {
+.widgetsRows .widget_nav_menu [class^="icon-"] > a, .widget_nav_menu [class*=" icon-"] > a { padding-left: 5px }
+.widgetsRows .widget_nav_menu ul li a {
     font-size: 14px;
     font-weight: normal;
 	background:url('images/bullet3.png') no-repeat top  left;
@@ -968,9 +969,15 @@ thead {
     border: 1px solid rgba(0, 0, 0, 0.06);
 }
 table th, table td {
-    padding: 7px 15px;
     text-align: left;
 }
+
+table tr.head{ 
+	background:#8cb129;
+	padding:2px;
+	color:#fff
+}
+	
 thead th { padding: 14px }
 tbody th { font-weight: normal }
 /*-[ Line ]---------------------*/
@@ -1282,7 +1289,12 @@ body > footer .sidebar .widget .title {
     font-size: 135%;
     color: #D4D8DB;
 }
-footer .widget { margin-bottom: 0px }
+footer .widget { 
+margin-bottom: 0px;
+float:left;
+width:200px;
+margin:0px 10px;
+}
 footer .widget li a { color: #fff }
 footer .widget li a:hover { color: #222 }
 footer {
@@ -2036,6 +2048,13 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 .topBanner{
 	float:left;
 	margin-left:10px;
+	width:280px;
+}
+
+#google_translate_element{
+	padding: 16px 20px;
+	border: 1px solid #8cb129;
+	background: #e4f2bd;
 }
 
 .featuredIcons {
@@ -2083,7 +2102,6 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 .widgetsRows h3{
 	font-size:14px;
 	border-bottom:1px solid #2c9c1a;
-	margin-right:10px;
 	background:#8cb129;
 	color:#fff;
 	padding:2px 0px 2px 5px;	
@@ -2110,9 +2128,8 @@ input#author:focus, input#email:focus, input#url:focus, #contactForm textarea:fo
 
 .widgetsRows .widget{
 	float:left;
-	width:205px;
+	width:196px;
 	padding:5px;
-	margin:0px 3px;
 }
 
 .footerSection{
